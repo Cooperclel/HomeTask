@@ -1,6 +1,5 @@
-import Exercise1_2_3.Count;
-import Exercise1_2_3.ICount;
-import Multiplication_table.MultiplicationTable;
+import Arrays.ArrayWork;
+
 
 public class Main {
 
@@ -12,14 +11,33 @@ public class Main {
         */
         ////////////////////////////////////////////////
 
-        ///////Задание 1.2///////////////////////////////
+        ///////Задание 1.2 и 1.3///////////////////////////////
 
-        ICount c1 = new Count(8988671);
-        //c1.factorial();
+        /*
+        int [] j = new int [args.length];
+        for(int i = 0; i<args.length;i++){
+            j[i] = Integer.parseInt(args[i]);
+        }
+        int number = j[0];
+        ICount c1 = new Count(number);
+        c1.factorial();
         c1.multiplicationRegister();
 
-
+         */
         /////////////////////////////////////////////////
+
+        ///////////Задание 2.1 2.2 2.3///////////////////
+
+        /*
+        int k = InputTastatur.inputInteger();
+        int a[] = new int [k];
+        ArrayWork array = new ArrayWork(a);
+        array.randomArray(k);
+        array.enumerationDoWhile(a[k]);
+
+         */
+        /////////////////////////////////////////////////
+
 
     }
 }

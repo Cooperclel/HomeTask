@@ -1,0 +1,93 @@
+package Arrays;
+
+import InputTastatur.IInputTastatur;
+import InputTastatur.InputTastatur;
+
+import java.lang.reflect.Array;
+
+public class ArrayWork {
+    public static void main(String[] args) {
+        System.out.println("Необходим размер массива:");
+        int k = InputTastatur.inputInteger();
+        int a[] = new int [k];
+        a = randomArray(k);
+        enumerationDoWhile(a);
+        enumerationWhile(a);
+        enumerationForeach(a);
+        enumerationFor(a);
+
+    }
+    public static int[] randomArray(int k){
+        System.out.println("Генерация рандомных чисел:");
+        int a[] = new int [k];
+        for (int i = 0; i<k; i++){
+            a[i] = (int)(Math.random()*10+1);
+        }
+        return a;
+    }
+
+    public static void enumerationDoWhile(int []a){
+        System.out.println("Перебор по Циклу do while");
+        int i = 0;
+        int k = a.length;
+        do{
+            System.out.println(i + "-й Элемент массива = " + a[i]);
+            i++;
+
+        }while (i!=k);
+
+    }
+
+    public static void enumerationWhile(int []a){
+        System.out.println("Перебор по Циклу while");
+        int i = 0;
+        int k = a.length;
+        while(i<k){
+            System.out.println(i + "-й Элемент массива = " + a[i]);
+            i++;
+        }
+
+    }
+
+    public static void enumerationFor(int []a){
+        System.out.println("Перебор по Циклу for");
+        for (int i=0;i<a.length;i++){
+            System.out.println(i + "-й Элемент массива = " + a[i]);
+        }
+    }
+
+    public static void enumerationForeach(int []a){
+        System.out.println("Перебор по Циклу foreach");
+        for (int array:a) {
+            System.out.println("Массив: " + array);
+        }
+    }
+
+    public static void everySecondElement(int a[]){
+        System.out.println("Выведем каждый второй элемент:");
+        for (int i = 0; i<a.length; i++){
+            if(i%2 == 0){
+                System.out.println(i + "-й Элемент массива = " + a[i]);
+            }
+        }
+
+    }
+
+    public static void nullStop(){
+        EmptyArray a[] = new EmptyArray[17];
+        System.out.println("Проверим элементы массива на null");
+        for (int i = 0; i<a.length; i++){
+            if(i%2 == 0){
+                System.out.println(i + "-й Элемент массива = " + a[i]);
+                if (a[i] == null) {
+                    System.out.println(i + "-й Элемент массива = null");
+                    break;
+                }
+
+            }
+        }
+
+    }
+
+
+}

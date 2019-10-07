@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/ICount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Multiplication_table/MultiplicationTable.java" afterDir="false" />
+    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="third commit">
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/Arrays.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/EmptyArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/TernaryOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/TernaryOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternary_operator/TernaryOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternary_operator/TernaryOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +30,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="https://github.com/Cooperclel/HomeTask" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RqEL8T6SgXqMO30A379QKhUqWT" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HomeTask3" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -77,7 +84,11 @@
       <updated>1570386166946</updated>
       <workItem from="1570386170396" duration="1072000" />
       <workItem from="1570461058034" duration="436000" />
-      <workItem from="1570461744764" duration="3899000" />
+      <workItem from="1570461744764" duration="4065000" />
+      <workItem from="1570543971176" duration="609000" />
+      <workItem from="1570562284756" duration="650000" />
+      <workItem from="1570566949530" duration="599000" />
+      <workItem from="1570597648076" duration="614000" />
     </task>
     <servers />
   </component>
@@ -96,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
   </component>
 </project>
