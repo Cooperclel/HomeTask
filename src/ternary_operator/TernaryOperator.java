@@ -1,8 +1,7 @@
 package ternary_operator;
 
 public class TernaryOperator {
-    private String a;
-
+    public String a = null;
 
     public TernaryOperator(String a){
         this.a = a;
@@ -19,7 +18,7 @@ public class TernaryOperator {
     }
 
     public void ternaryOperator(){
-        //a != null ? System.out.println("Запишите что-нибудь в TernaryOperator") : System.out.println(a);
+        //a == null ? System.out.println("Запишите что-нибудь в TernaryOperator") : System.out.println(a);
     }
 
 }

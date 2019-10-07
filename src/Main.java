@@ -7,8 +7,10 @@ import logical_operators.IBitwiseOpertors;
 import logical_operators.IOperators;
 import logical_operators.LogicalOperators;
 import ternary_operator.IIfOperator;
+import ternary_operator.ITernaryOperator;
 import ternary_operator.IfOperator;
 import operations.*;
+import ternary_operator.TernaryOperator;
 
 public class Main {
 
@@ -32,7 +34,7 @@ public class Main {
 
         ////////////////Задание 3///////////////////////////////////////
         IIfOperator ifp = new IfOperator("irir");
-
+       // ITernaryOperator ti = new TernaryOperator("iqiiq");
 /////////////////Задание 4///////////////////////
         IComputer c1 = new AsusComputer(new Ram(10), new Hdd(1008));
         IComputer c2 = new AsusComputer(new Ram(10), new Hdd(2008));
@@ -77,7 +79,7 @@ public class Main {
 /////////////////Задание 3//////////////
 
         ifp.proofText();
-
+        //ti.ternaryOperator();
         System.out.println("Задание 4:");
         System.out.println("");
 /////////////Задание 4///////////////////

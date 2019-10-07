@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="" />
+    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/ICount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Multiplication_table/MultiplicationTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/TernaryOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/TernaryOperator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ternary_operator/TernaryOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ternary_operator/TernaryOperator.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,10 +27,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1RqEL8T6SgXqMO30A379QKhUqWT" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -61,10 +76,25 @@
       <option name="presentableId" value="Default" />
       <updated>1570386166946</updated>
       <workItem from="1570386170396" duration="1072000" />
+      <workItem from="1570461058034" duration="436000" />
+      <workItem from="1570461744764" duration="3899000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
