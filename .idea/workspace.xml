@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="third commit">
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/Arrays.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/EmptyArray.java" afterDir="false" />
+    <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/Objekt/Car/Car.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/Objekt/Car/ICar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/Objekt/Motor/Motor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/Objekt/Wheel/Wheel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Car/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Car/ICar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Motor/Motor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Wheel/Wheel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/EmptyArray.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeTask3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Main.java" afterDir="false" />
     </list>
@@ -89,8 +95,16 @@
       <workItem from="1570543971176" duration="609000" />
       <workItem from="1570562284756" duration="650000" />
       <workItem from="1570566949530" duration="599000" />
-      <workItem from="1570597648076" duration="614000" />
+      <workItem from="1570597648076" duration="1846000" />
     </task>
+    <task id="LOCAL-00001" summary="third commit">
+      <created>1570603472328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570603472328</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -27,6 +27,7 @@ public class Count implements ICount {
     }
 
     public void multiplicationRegister(){
+        System.out.println("Произведение чисел введенного числа:");
         int b = 1;
         int i = 1;
         while (number>0){

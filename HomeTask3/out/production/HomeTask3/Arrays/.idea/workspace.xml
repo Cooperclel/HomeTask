@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2dd5ae20-e1af-4e92-b088-55f44df2ed5e" name="Default Changelist" comment="">
+    <list default="true" id="2dd5ae20-e1af-4e92-b088-55f44df2ed5e" name="Default Changelist" comment="third commit">
+      <change afterPath="$PROJECT_DIR$/.idea/Arrays.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ArrayWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../InputTastatur/IInputTastatur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../InputTastatur/InputTastatur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmptyArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../out/production/HomeTask3/Exercise1_2_3/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/HomeTask3/Exercise1_2_3/Count.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../out/production/HomeTask3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../out/production/HomeTask3/Main.class" afterDir="false" />
@@ -18,7 +18,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Illia Tokarau &lt;ilia_tokariev@mail.ru&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Мои документы-Архив вер1\Мои документы\JAVA\Занятие 1\HomeTask2.1\HomeTask3\src\Arrays\.idea" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1RxEux5SBCDZ2n90o4DxxWjOE3u" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -50,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1570600572628</updated>
       <workItem from="1570600573958" duration="15000" />
+      <workItem from="1570603200563" duration="223000" />
     </task>
     <servers />
   </component>
@@ -61,10 +74,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
   </component>
 </project>
