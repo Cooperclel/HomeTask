@@ -2,67 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Exercise1_2_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask3/src/Multiplication_table/Table.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise1/Exercise1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise2/Exercise2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise3/Exercise3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise3/IProofText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise3/ProofText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise4/Exercise4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise5/Exercise5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise6/Exercise6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Exercise1_2_3/Count.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Exercise1_2_3/Count.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/AcerComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/AsusComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/Computer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/Hdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/IComputer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/dto/Ram.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/equation/Equations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/equation/IEquations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/exercise6/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/logical_operators/BitwiseOperators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/logical_operators/IBitwiseOpertors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/logical_operators/IOperators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/logical_operators/LogicalOperators.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/operations/IShift.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/operations/ShiftDouble.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/operations/ShiftInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/operations/ShiftNegativeNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/IIfOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/ITernaryOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/IfOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/ternary_operator/TernaryOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/AcerComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/AcerComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/AsusComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/AsusComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/Hdd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/Hdd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/IComputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/IComputer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/Ram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise4/ExampleIComputer/Ram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equation/Equations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise5/Equations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/equation/IEquations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise5/IEquations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exercise6/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise6/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logical_operators/BitwiseOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise2/BitwiseOperators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logical_operators/IBitwiseOpertors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise2/IBitwiseOpertors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logical_operators/IOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise2/ILogicalOperators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logical_operators/LogicalOperators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise2/LogicalOperators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operations/IShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise1/IShift.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operations/ShiftDouble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise1/ShiftDouble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operations/ShiftInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise1/ShiftInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/operations/ShiftNegativeNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise1/ShiftNegativeNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternary_operator/IIfOperator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternary_operator/ITernaryOperator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternary_operator/IfOperator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ternary_operator/TernaryOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/InputTastatur/IInputTastatur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/InputTastatur/InputTastatur.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/InputTastatur/InputTastatur.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +24,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="Illia Tokarau &lt;ilia_tokariev@mail.ru&gt;" />
         <option value="https://github.com/Cooperclel/HomeTask" />
+        <option value="Illia Tokarau &lt;ilia_tokariev@mail.ru&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,7 +82,7 @@
       <workItem from="1570566949530" duration="599000" />
       <workItem from="1570597648076" duration="1846000" />
       <workItem from="1570624034419" duration="4994000" />
-      <workItem from="1570634485856" duration="528000" />
+      <workItem from="1570634485856" duration="1246000" />
     </task>
     <task id="LOCAL-00001" summary="third commit">
       <created>1570603472328</created>
@@ -169,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="third commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
+    <MESSAGE value="zusatz" />
+    <option name="LAST_COMMIT_MESSAGE" value="zusatz" />
   </component>
 </project>

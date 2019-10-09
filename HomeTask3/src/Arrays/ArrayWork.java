@@ -4,9 +4,7 @@ import Arrays.Objekt.Car.Car;
 import Arrays.Objekt.Car.ICar;
 import Arrays.Objekt.Motor.Motor;
 import Arrays.Objekt.Wheel.Wheel;
-import InputTastatur.IInputTastatur;
 import InputTastatur.InputTastatur;
-import java.lang.reflect.Array;
 
 public class ArrayWork {
     public static void main(String[] args) {

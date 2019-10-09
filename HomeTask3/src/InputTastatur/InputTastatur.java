@@ -3,7 +3,7 @@ import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.math.BigInteger;
 import java.util.Scanner;
 
-public class InputTastatur implements IInputTastatur {
+public class InputTastatur {
     public static int  inputInteger(){
         Scanner in = new Scanner(System.in);
         System.out.println("Введите какое-нибудь число: ");
