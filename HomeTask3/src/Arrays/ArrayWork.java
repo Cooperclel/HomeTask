@@ -10,7 +10,7 @@ import java.lang.reflect.Array;
 
 public class ArrayWork {
     public static void main(String[] args) {
-        /*System.out.println("Необходим размер массива:");
+        System.out.println("Необходим размер массива:");
         int k = InputTastatur.inputInteger();
         int a[] = new int [k];
         a = randomArray(k);
@@ -19,8 +19,9 @@ public class ArrayWork {
         enumerationForeach(a);
         enumerationFor(a);
         everySecondElement(a);
-        nullStop();*/
+        nullStop();
 
+        System.out.println("Задание 3");
         ICar car1 = new Car(new Motor(32,"bens","oho"), new Wheel(12,"Spring","iqwi"));
         ICar car2 = new Car(new Motor(34,"sol","ohwo"), new Wheel(62,"Winter","iqwiq"));
         ICar car3 = new Car(new Motor(37,"bens","oeho"), new Wheel(21,"Summer","iqewi"));
@@ -31,6 +32,8 @@ public class ArrayWork {
             System.out.println(i + "-й Объект: " + c[i]);
         }
     }
+
+
     public static int[] randomArray(int k){
         System.out.println("Генерация рандомных чисел:");
         int a[] = new int [k];
