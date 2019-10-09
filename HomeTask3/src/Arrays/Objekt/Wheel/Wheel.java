@@ -31,4 +31,8 @@ public class Wheel {
     public String getName() {
         return name;
     }
+
+    public String toString (){
+        return "Wheel: " + " radius " + radius + " seasonType " + seasonType + " name " + name + "\n";
+    }
 }

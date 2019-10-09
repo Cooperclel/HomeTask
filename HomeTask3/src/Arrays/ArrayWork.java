@@ -2,13 +2,17 @@ package Arrays;
 
 import Arrays.Objekt.Car.Car;
 import Arrays.Objekt.Car.ICar;
+import Arrays.Objekt.Car.Models.BMW;
+import Arrays.Objekt.Car.Models.Bugati;
+import Arrays.Objekt.Car.Models.Masda;
+import Arrays.Objekt.Car.Models.Reno;
 import Arrays.Objekt.Motor.Motor;
 import Arrays.Objekt.Wheel.Wheel;
 import InputTastatur.InputTastatur;
 
 public class ArrayWork {
     public static void main(String[] args) {
-        System.out.println("Необходим размер массива:");
+        /*System.out.println("Необходим размер массива:");
         int k = InputTastatur.inputInteger();
         int a[] = new int [k];
         a = randomArray(k);
@@ -17,17 +21,17 @@ public class ArrayWork {
         enumerationForeach(a);
         enumerationFor(a);
         everySecondElement(a);
-        nullStop();
+        nullStop();*/
 
         System.out.println("Задание 3");
-        ICar car1 = new Car(new Motor(32,"bens","oho"), new Wheel(12,"Spring","iqwi"));
-        ICar car2 = new Car(new Motor(34,"sol","ohwo"), new Wheel(62,"Winter","iqwiq"));
-        ICar car3 = new Car(new Motor(37,"bens","oeho"), new Wheel(21,"Summer","iqewi"));
-        ICar car4 = new Car(new Motor(41,"sol","owho"), new Wheel(32,"Spring","iqwiqw"));
+        ICar car1 = new BMW(new Motor(32,"bens","oho"), new Wheel(12,"Spring","iqwi"));
+        ICar car2 = new Reno(new Motor(34,"sol","ohwo"), new Wheel(62,"Winter","iqwiq"));
+        ICar car3 = new Bugati(new Motor(37,"bens","oeho"), new Wheel(21,"Summer","iqewi"));
+        ICar car4 = new Masda(new Motor(41,"sol","owho"), new Wheel(32,"Spring","iqwiqw"));
 
         ICar c[] = {car1,car2,car3,car4};
         for(int i = 0;i<c.length;i++){
-            System.out.println(i + "-й Объект: " + c[i]);
+            System.out.println(i + "-й Объект) " + c[i]);
         }
     }
 
@@ -92,14 +96,15 @@ public class ArrayWork {
         Integer a[] = {12,349,12112, null,12892189, null};
         System.out.println("Проверим элементы массива на null");
         for (int i = 0; i<a.length; i++){
-            if(i%2 == 0){
-                System.out.println(i + "-й Элемент массива = " + a[i]);
-                if (a[i] == null) {
-                    System.out.println(i + "-й Элемент массива = null");
-                    break;
-                }
-
+            if (a[i] == null) {
+                System.out.println(i + "-й Элемент массива = null");
+                break;
             }
+            if (i % 2 == 0) {
+                System.out.println(i + "-й Элемент массива = " + a[i]);
+            }
+
+
         }
 
     }

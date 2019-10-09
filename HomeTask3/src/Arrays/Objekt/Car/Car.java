@@ -2,7 +2,7 @@ package Arrays.Objekt.Car;
 import Arrays.Objekt.Motor.Motor;
 import Arrays.Objekt.Wheel.Wheel;
 
-public class Car implements ICar{
+public abstract class Car implements ICar{
     private Motor motor;
     private Wheel wheel;
 
@@ -49,4 +49,8 @@ public class Car implements ICar{
             System.out.println("Ключ не верный - у вас не верный ключ");
         }
     }
+
+    public abstract void carName();
+
+
 }

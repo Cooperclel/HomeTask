@@ -39,6 +39,6 @@ public class Count implements ICount {
             number = number/10;
             i++;
         }
-        System.out.println("Сумма цифр числа " + l + " = " + b);
+        System.out.println("Произведение цифр числа " + l + " = " + b);
     }
 }

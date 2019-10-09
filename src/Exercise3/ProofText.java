@@ -18,6 +18,7 @@ public class ProofText implements IProofText {
     }
 
     public void ternaryOperator(){
-        //k>b? System.out.println(k + "больше чем " + b) : System.out.println(k + " больше чем " + b);
+        String a = k>b? k + "больше чем " + b : k + " меньше чем " + b;
+        System.out.println(a);
     }
 }

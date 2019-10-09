@@ -31,4 +31,8 @@ public class Motor {
     public String getName() {
         return name;
     }
+
+    public String toString(){
+        return "Motor:" + " volume = " + volume + " benzinType " + benzineType + " name " + name + "\n";
+    }
 }
