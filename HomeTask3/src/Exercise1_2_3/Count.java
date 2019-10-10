@@ -5,16 +5,16 @@ import java.math.BigInteger;
 import java.util.HashMap;
 
 public class Count implements ICount {
-    private int number;
+    private long number;
 
-    public Count(int number){
+    public Count(long number){
         this.number=number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(long number) {
         this.number = number;
     }
-    public int getNumber() {
+    public long getNumber() {
         return number;
     }
 
@@ -30,7 +30,7 @@ public class Count implements ICount {
         System.out.println("Произведение чисел введенного числа:");
         int b = 1;
         int i = 1;
-        int l = number;
+        long l = number;
         while (number>0){
             System.out.println("Действие " + i + ") ");
             System.out.println(i + "-я Переменная b = " + b);

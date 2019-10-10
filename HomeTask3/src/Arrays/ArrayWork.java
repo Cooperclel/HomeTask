@@ -12,7 +12,7 @@ import InputTastatur.InputTastatur;
 
 public class ArrayWork {
     public static void main(String[] args) {
-        /*System.out.println("Необходим размер массива:");
+        System.out.println("Необходим размер массива:");
         int k = InputTastatur.inputInteger();
         int a[] = new int [k];
         a = randomArray(k);
@@ -21,7 +21,7 @@ public class ArrayWork {
         enumerationForeach(a);
         enumerationFor(a);
         everySecondElement(a);
-        nullStop();*/
+        nullStop();
 
         System.out.println("Задание 3");
         ICar car1 = new BMW(new Motor(32,"bens","oho"), new Wheel(12,"Spring","iqwi"));
