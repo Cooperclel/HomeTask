@@ -3,7 +3,8 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 public class Test4 {
     public static void main(String []args){
-        String pattern_email = "^([80] | [+375])(29)(/*/*/*/*/*/*/*)$";
+        String pattern_email = "(^\\+375\\(29\\)\\d{7}$)|(^8029\\d{7}$)|(^\\+7\\(129\\)\\d{3}-\\d{2}-\\d{2}$)|(^\\+375\\s29\\s\\d{7}$)|" +
+                "(^\\+375\\(29\\)\\d{3}-\\d{2}-\\d{2}$)";
         Pattern pattern = Pattern.compile(pattern_email);
         String[] telefon = new String[]{
                 "+375 29 5553628", "I love you",
