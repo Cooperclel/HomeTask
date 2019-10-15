@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="zusatz">
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/Messanger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/ConsoleSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/FileSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/IHistorySaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/Dialogs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/InputTastatur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/user/ValidateUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/Arrays/ArrayWork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/InputTastatur/IInputTastatur.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/InputTastatur/InputTastatur.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/out/production/HomeTask3/InputTastatur/InputTastatur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/ArrayWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask3/src/Arrays/Objekt/Car/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HomeTask2.1/Exercise3/ProofText.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HomeTask2.1/Exercise3/ProofText.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise3/ProofText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise3/ProofText.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +89,7 @@
       <workItem from="1570597648076" duration="1846000" />
       <workItem from="1570624034419" duration="4994000" />
       <workItem from="1570634485856" duration="1748000" />
+      <workItem from="1570984691220" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="third commit">
       <created>1570603472328</created>
