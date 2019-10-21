@@ -8,15 +8,11 @@ import java.util.regex.Pattern;
 
 public class ValidateUser {
     private static boolean proofLogin(User user){
-        boolean p = false;
         String login = user.getLogin();
-        Pattern pattern = Pattern.compile("(#|!|\\\\|^[0-9])");
+        Pattern pattern = Pattern.compile("(#|!|\\\\|^[0-9]|^[azAZ]|^.{0,4}$)");
         Matcher matcher = pattern.matcher(login);
-        if (!matcher.find())
-        {
-            p = true;
-        }
-        return p;
+
+        return !matcher.find();
     }
 
     private static boolean proofPasswort(User user){

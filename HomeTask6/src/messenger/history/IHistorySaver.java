@@ -1,5 +1,8 @@
 package messenger.history;
 
 public interface IHistorySaver {
-    void println(String s);
+    void add(String s);
+    void commandList();
+    void commandListMessage();
+    void commandListDialog();
 }

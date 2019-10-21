@@ -1,12 +1,16 @@
 package messenger.message;
 
 
+import messenger.encryption.Decryption;
+import messenger.encryption.Encryption;
+import messenger.user.IUser;
 import messenger.user.User;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.InputMismatchException;
 
-public class Message {
+public class Message implements IMessage{
     private String message;
     private final User user;
     private Date date;
@@ -42,7 +46,7 @@ public class Message {
     }
 
     public static Message pauseInMessage(Message message){
-        System.out.println("Введите колечество минут, на которое необходимо задержать сообщение: ");
+        System.out.println("Введите количество минут, на которое необходимо задержать сообщение: ");
         int p = InputTastatur.inputTastaturInteger();
         p= p * 60000;
         Date realDate = message.getDate();
@@ -50,6 +54,36 @@ public class Message {
         Date changeDate = new Date(time);
         message.setDate(changeDate);
         return message;
+    }
+
+    public static String fixMessage(Dialogs dialogs, String key){
+        if(dialogs.getMessages().length != 0){
+            System.out.println("Выберите номер сообщения, которое хотите исправить:");
+            int a = InputTastatur.inputTastaturInteger();
+            boolean p =false;
+            do{
+                try{
+                    if(a <= dialogs.getMessages().length){
+                        Calendar calendar = Calendar.getInstance();
+                        Date date = calendar.getTime();
+                        long b = date.getTime() - dialogs.getMessages()[a].getDate().getTime();
+
+                        if (date.getTime() - dialogs.getMessages()[a].getDate().getTime() <= 60000) {
+                            System.out.println("Исправьте сообщение");
+                            String newMessage = InputTastatur.inputTastatur();
+                            newMessage = Encryption.encryption(newMessage, key);
+                            dialogs.getMessages()[a].setMessage(newMessage);
+                        }else System.out.println("Сообщение не может быть исправлено");
+
+                        p = true;
+                    }
+                }catch (InputMismatchException e){
+                    System.out.println("Ошибка" + e.getMessage());
+                }
+            }while(p = false);
+
+        }else System.out.println("Диалог пуст");
+        return "";
     }
 
     @Override

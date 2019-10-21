@@ -1,5 +1,6 @@
 package messenger.message;
 
+import messenger.encryption.Decryption;
 import messenger.history.IHistorySaver;
 import messenger.message.Message;
 
@@ -23,8 +24,8 @@ public class Dialogs implements IDialog {
                 this.messages[this.messages.length - messagesLength--] = mes;
             }
         }
-    }
 
+    }
 
     public Message[] getMessages() {
         return messages;
@@ -38,26 +39,19 @@ public class Dialogs implements IDialog {
         return "End of dialog";
     }
 
-    public void history(IHistorySaver saver){
-        for (Message message : this.messages) {
-            saver.println(message.toString());
+    public static Dialogs toStringDecryption(Dialogs dialogs) {
+        String key = Decryption.keyIndication();
+        for (int i = 0; i < dialogs.getMessages().length; i++){
+            String decryptionMessage = Decryption.decryption(dialogs.getMessages()[i].getMessage(), key);
+            dialogs.getMessages()[i].setMessage(decryptionMessage);
         }
-
+        return dialogs;
     }
 
-    public void fixMessage(){
-        if(getMessages().length != 0){
-            System.out.println("Выберите номер сообщения, которое хотите исправить:");
-            int a = InputTastatur.inputTastaturInteger();
-            Calendar calendar = Calendar.getInstance();
-            Date date = calendar.getTime();
-            long b = date.getTime() - messages[a].getDate().getTime();
-            if (date.getTime() - messages[a].getDate().getTime() <= 60000) {
-                System.out.println("Исправьте сообщение");
-                String newMessage = InputTastatur.inputTastatur();
-                messages[a].setMessage(newMessage);
-            }else System.out.println("Сообщение не может быть исправлено");
-        }else System.out.println("Диалог пуст");
+    public void history(IHistorySaver saver){
+        for (Message message : this.messages) {
+            saver.add(message.toString());
+        }
     }
 
     public void sortDialog(){

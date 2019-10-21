@@ -5,7 +5,7 @@ import messenger.history.IHistorySaver;
 import java.io.File;
 import java.io.PrintStream;
 
-public class FileSaver implements IHistorySaver {
+public class FileSaver /*implements IHistorySaver*/ {
 
     private final File stream;
 
@@ -13,8 +13,8 @@ public class FileSaver implements IHistorySaver {
         this.stream = stream;
     }
 
-    @Override
-    public void println(String s) {
+
+    public void add(String s) {
         //....
     }
 }
