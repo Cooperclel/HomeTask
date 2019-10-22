@@ -39,13 +39,13 @@ public class Dialogs implements IDialog {
         return "End of dialog";
     }
 
-    public static Dialogs toStringDecryption(Dialogs dialogs) {
+    public static Dialogs toStringDecryption(Dialogs encriptionDialog) {
         String key = Decryption.keyIndication();
-        for (int i = 0; i < dialogs.getMessages().length; i++){
-            String decryptionMessage = Decryption.decryption(dialogs.getMessages()[i].getMessage(), key);
-            dialogs.getMessages()[i].setMessage(decryptionMessage);
+        for (int i = 0; i < encriptionDialog.getMessages().length; i++){
+            String decryptionMessage = Decryption.decryption(encriptionDialog.getMessages()[i].getMessage(), key);
+            encriptionDialog.getMessages()[i].setMessage(decryptionMessage);
         }
-        return dialogs;
+        return encriptionDialog;
     }
 
     public void history(IHistorySaver saver){

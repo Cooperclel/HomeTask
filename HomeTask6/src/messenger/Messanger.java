@@ -139,8 +139,6 @@ public class Messanger {
                         encriptionDialog = dialogs;
                         decriptionDialog = Dialogs.toStringDecryption(encriptionDialog);
                         System.out.println(decriptionDialog.toString());
-                        encriptionDialog = null;
-                        decriptionDialog = null;
                     }
 
                     if (commandDialog.equals("4")) {
@@ -148,8 +146,6 @@ public class Messanger {
                         decriptionDialog = Dialogs.toStringDecryption(encriptionDialog);
                         System.out.println(decriptionDialog.toString());
                         Message.fixMessage(dialogs, key);
-                        encriptionDialog = null;
-                        decriptionDialog = null;
                     }
 
                 }while (!commandDialog.equals("5"));

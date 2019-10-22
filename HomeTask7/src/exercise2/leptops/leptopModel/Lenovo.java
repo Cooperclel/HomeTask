@@ -15,9 +15,9 @@ public class Lenovo extends Leptops {
         System.out.println("Leptop Lenovo is off");
     }
 
-    public int compareTo(Lenovo lenovo) {
-        if(this.getAge()>lenovo.getAge()){return 1;}
-        if(this.getAge()<lenovo.getAge()){return -1;}
+    public int compareTo(Leptops leptop) {
+        if(this.getAge()>leptop.getAge()){return 1;}
+        if(this.getAge()<leptop.getAge()){return -1;}
         return 0;
     }
 

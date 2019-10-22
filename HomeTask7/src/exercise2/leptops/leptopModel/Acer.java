@@ -14,4 +14,10 @@ public class Acer extends Leptops {
     public void off(){
         System.out.println("Leptop Acer is off");
     }
+
+    public int compareTo(Leptops leptop) {
+        if(this.getAge()>leptop.getAge()){return 1;}
+        if(this.getAge()<leptop.getAge()){return -1;}
+        return 0;
+    }
 }

@@ -1,16 +1,14 @@
 package messenger.message;
 
 
-import messenger.encryption.Decryption;
 import messenger.encryption.Encryption;
-import messenger.user.IUser;
 import messenger.user.User;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.InputMismatchException;
 
-public class Message implements IMessage{
+public class Message {
     private String message;
     private final User user;
     private Date date;
@@ -59,10 +57,10 @@ public class Message implements IMessage{
     public static String fixMessage(Dialogs dialogs, String key){
         if(dialogs.getMessages().length != 0){
             System.out.println("Выберите номер сообщения, которое хотите исправить:");
-            int a = InputTastatur.inputTastaturInteger();
             boolean p =false;
             do{
                 try{
+                    int a = InputTastatur.inputTastaturInteger();
                     if(a <= dialogs.getMessages().length){
                         Calendar calendar = Calendar.getInstance();
                         Date date = calendar.getTime();
@@ -76,11 +74,13 @@ public class Message implements IMessage{
                         }else System.out.println("Сообщение не может быть исправлено");
 
                         p = true;
+                    }else {
+                        System.out.println("Вы введи несуществующий номер сообщения");
                     }
                 }catch (InputMismatchException e){
                     System.out.println("Ошибка" + e.getMessage());
                 }
-            }while(p = false);
+            }while(!p);
 
         }else System.out.println("Диалог пуст");
         return "";

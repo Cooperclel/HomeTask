@@ -1,6 +1,6 @@
 package exercise2.leptops;
 
-public abstract class Leptops implements ILeptops{
+public abstract class Leptops implements ILeptops,Comparable<Leptops>{
     private int age;
     private int ram;
     private String cpu;
@@ -35,18 +35,20 @@ public abstract class Leptops implements ILeptops{
         this.cpu = cpu;
     }
 
-    @Override
-    public String toString() {
-        return "Leptops{" + this.getClass() +
-                "age=" + age +
-                ", ram=" + ram +
-                ", cpu='" + cpu + '\'' +
-                '}';
-    }
-
     public int compareTo(Leptops leptop) {
         if(this.getAge()>leptop.getAge()){return 1;}
         if(this.getAge()<leptop.getAge()){return -1;}
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Leptops{" + this.getClass() +
+                " age=" + age +
+                ", ram=" + ram +
+                ", cpu='" + cpu + '\'' +
+                '}';
+    }
+
+
 }
