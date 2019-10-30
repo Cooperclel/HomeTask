@@ -75,7 +75,7 @@ public class Message {
 
                         p = true;
                     }else {
-                        System.out.println("Вы введи несуществующий номер сообщения");
+                        System.out.println("Вы ввели несуществующий номер сообщения");
                     }
                 }catch (InputMismatchException e){
                     System.out.println("Ошибка" + e.getMessage());

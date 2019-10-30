@@ -132,20 +132,24 @@ public class Messanger {
                         System.out.println(dialogs.toString());
                     }
 
-                    Dialogs encriptionDialog = null;
-                    Dialogs decriptionDialog = null;
-
                     if (commandDialog.equals("3")) {
-                        encriptionDialog = dialogs;
-                        decriptionDialog = Dialogs.toStringDecryption(encriptionDialog);
-                        System.out.println(decriptionDialog.toString());
+                        Dialogs decryptionDialog = Dialogs.toStringDecryption(dialogs);
+                        System.out.println(decryptionDialog.toString());
+                        for (int i = 0; i < dialogs.getMessages().length; i++) {
+                            String encryptionMessage = Encryption.encryption(dialogs.getMessages()[i].getMessage(),key);
+                            dialogs.getMessages()[i].setMessage(encryptionMessage);
+                        }
                     }
 
                     if (commandDialog.equals("4")) {
-                        encriptionDialog = dialogs;
-                        decriptionDialog = Dialogs.toStringDecryption(encriptionDialog);
-                        System.out.println(decriptionDialog.toString());
-                        Message.fixMessage(dialogs, key);
+                        Dialogs decryptionDialog = Dialogs.toStringDecryption(dialogs);
+                        System.out.println(decryptionDialog.toString());
+                        Message.fixMessage(decryptionDialog, key);
+                        for (int i = 0; i < decryptionDialog.getMessages().length; i++) {
+                            String encryptionMessage = Encryption.encryption(decryptionDialog.getMessages()[i].getMessage(),key);
+                            dialogs.getMessages()[i].setMessage(encryptionMessage);
+                        }
+
                     }
 
                 }while (!commandDialog.equals("5"));
