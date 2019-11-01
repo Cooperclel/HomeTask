@@ -39,8 +39,8 @@ public class Dialogs implements IDialog {
         return "End of dialog";
     }
 
-    public static Dialogs toStringDecryption(Dialogs encriptionDialog) {
-        String key = Decryption.keyIndication();
+    public static Dialogs toDecryption(Dialogs encriptionDialog, String key) {
+        //String key = Decryption.keyIndication();
         for (int i = 0; i < encriptionDialog.getMessages().length; i++){
             String decryptionMessage = Decryption.decryption(encriptionDialog.getMessages()[i].getMessage(), key);
             encriptionDialog.getMessages()[i].setMessage(decryptionMessage);

@@ -69,7 +69,7 @@ public class Message {
                         if (date.getTime() - dialogs.getMessages()[a].getDate().getTime() <= 60000) {
                             System.out.println("Исправьте сообщение");
                             String newMessage = InputTastatur.inputTastatur();
-                            newMessage = Encryption.encryption(newMessage, key);
+                            //newMessage = Encryption.encryption(newMessage, key);
                             dialogs.getMessages()[a].setMessage(newMessage);
                         }else System.out.println("Сообщение не может быть исправлено");
 

@@ -39,7 +39,7 @@ public class Messanger {
                 do {
                     consoleList.commandListDialog();
                     commandDialog = ConsoleSaver.correctCommand();
-
+                    String enteredKey = key;
                     if (commandDialog.equals("1")) {
                         user1.checkUser(user1);
                         user2.checkUser(user2);
@@ -60,7 +60,7 @@ public class Messanger {
 
                                     if (choiseUser.equals("1") || choiseUser.equalsIgnoreCase("user1") || choiseUser.equals(user1.getLogin())) {
                                         Message message = new Message(user1);
-                                        String encryptionMessage = Encryption.encryption(message.getMessage(), key);
+                                        String encryptionMessage = Encryption.encryption(message.getMessage(), enteredKey);
                                         message.setMessage(encryptionMessage);
                                         dialogs.addMessages(message);
                                         System.out.println("Сообщение доставлено");
@@ -69,7 +69,7 @@ public class Messanger {
 
                                     if (choiseUser.equals("2") || choiseUser.equalsIgnoreCase("user2") || choiseUser.equals(user2.getLogin())) {
                                         Message message = new Message(user2);
-                                        String encryptionMessage = Encryption.encryption(message.getMessage(), key);
+                                        String encryptionMessage = Encryption.encryption(message.getMessage(), enteredKey);
                                         message.setMessage(encryptionMessage);
                                         dialogs.addMessages(message);
                                         System.out.println("Сообщение доставлено");
@@ -96,7 +96,7 @@ public class Messanger {
                                     if (choiseUser.equals("1") || choiseUser.equals(user1.getLogin())) {
                                         Message message = new Message(user1);
                                         Message.pauseInMessage(message);
-                                        String encryptionMessage = Encryption.encryption(message.getMessage(), key);
+                                        String encryptionMessage = Encryption.encryption(message.getMessage(), enteredKey);
                                         message.setMessage(encryptionMessage);
                                         dialogs.addMessages(message);
                                         System.out.println("Сообщение доставлено");
@@ -106,7 +106,7 @@ public class Messanger {
                                     if (choiseUser.equals("2") || choiseUser.equals(user2.getLogin())) {
                                         Message message = new Message(user2);
                                         Message.pauseInMessage(message);
-                                        String encryptionMessage = Encryption.encryption(message.getMessage(), key);
+                                        String encryptionMessage = Encryption.encryption(message.getMessage(), enteredKey);
                                         message.setMessage(encryptionMessage);
                                         dialogs.addMessages(message);
                                         System.out.println("Сообщение доставлено");
@@ -133,20 +133,22 @@ public class Messanger {
                     }
 
                     if (commandDialog.equals("3")) {
-                        Dialogs decryptionDialog = Dialogs.toStringDecryption(dialogs);
+                        String newKey = Decryption.keyIndication();
+                        Dialogs decryptionDialog = Dialogs.toDecryption(dialogs,newKey);
                         System.out.println(decryptionDialog.toString());
                         for (int i = 0; i < dialogs.getMessages().length; i++) {
-                            String encryptionMessage = Encryption.encryption(dialogs.getMessages()[i].getMessage(),key);
+                            String encryptionMessage = Encryption.encryption(decryptionDialog.getMessages()[i].getMessage(),newKey);
                             dialogs.getMessages()[i].setMessage(encryptionMessage);
                         }
                     }
 
                     if (commandDialog.equals("4")) {
-                        Dialogs decryptionDialog = Dialogs.toStringDecryption(dialogs);
+                        String newKey = Decryption.keyIndication();
+                        Dialogs decryptionDialog = Dialogs.toDecryption(dialogs,newKey);
                         System.out.println(decryptionDialog.toString());
-                        Message.fixMessage(decryptionDialog, key);
+                        Message.fixMessage(decryptionDialog, newKey);
                         for (int i = 0; i < decryptionDialog.getMessages().length; i++) {
-                            String encryptionMessage = Encryption.encryption(decryptionDialog.getMessages()[i].getMessage(),key);
+                            String encryptionMessage = Encryption.encryption(decryptionDialog.getMessages()[i].getMessage(),newKey);
                             dialogs.getMessages()[i].setMessage(encryptionMessage);
                         }
 
