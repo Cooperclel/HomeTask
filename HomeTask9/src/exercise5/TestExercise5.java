@@ -1,16 +1,31 @@
 package exercise5;
 
+import exercise3_4.Person;
+
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class TestExercise5 {
     public static void main(String[] args) {
+        List<Person> studensList = new ArrayList<>();
         try{
-            FileOutputStream fileOutputStream= new FileOutputStream("studentsFile.txt");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.close();
+            FileInputStream fileInputStream = new FileInputStream("studentsFile.txt");
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            Object object = null;
+            while ((object = objectInputStream.readObject()) != null){
+                Person students = (Person) object;
+                studensList.add(students);
+            }
+            objectInputStream.close();
+            studensList.stream().sorted(Comparator.comparing(Person::getId)).forEach(System.out::println);
+
         }catch (FileNotFoundException e){
             e.printStackTrace();
         }catch (IOException e){
+            e.printStackTrace();
+        }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
     }

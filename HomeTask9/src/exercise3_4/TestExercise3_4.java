@@ -8,11 +8,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TestExercise3_4 {
+    private static int id = 0;
+    //private static float avgValue = 0;
     public static void main(String[] args){
         String [] studentsName = {"Illia", "Vanja", "Olja", "Ira", "Kolja", "Sasha", "Sweta"};
 
         Stream<Person> studentsStream = Stream.generate(() -> {
-            int id = (int) Math.random()*10;
+            id++;
+            //int id = (int) Math.random()*10;
             String name = studentsName[(int) Math.random()*10];
             float avgValue = (float) MathRounding.roundingBigDecimal(Math.random()*10, 2);
             return new Person(id, name, avgValue);
@@ -22,14 +25,32 @@ public class TestExercise3_4 {
                 .limit(100)
                 .sorted(Comparator.comparing(Person::getName));
 
-        Map<Integer, Person> studentsMap = new TreeMap<>(studentsStream.collect(Collectors.toMap(Person::getId, p->p)));
+        Map<Integer, Person> studentsMap = new TreeMap<>(studentsStream
+                .collect(Collectors.toMap(Person::getId, p->p)));
 
-        File studentsFile = new File("studentsFile.txt");
+        List<Person> studentsList = new ArrayList<>();
+        studentsMap.entrySet().stream()
+                .forEach((p) -> {
+            studentsList.add(p.getValue());
+        });
+        studentsList.stream()
+                .sorted(Comparator.comparing(Person::getId))
+                .forEach(System.out::println);
+//        List<Person> studentsList = new ArrayList<>(studentsMap.entrySet().stream()
+//                .collect(Collectors.toList()));
+//                //.forEach(System.out::println));
+//        for (int i = 0; i < studentsList.size(); i++) {
+//            System.out.println(i + ") " + studentsList.get(i));
+//        }
+
+        File studentsFile = new File("studentsFile.bin");
+
+        System.out.println(studentsMap);
 
         try{
             FileOutputStream fileOutputStream = new FileOutputStream(studentsFile);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            for(int i=studentsMap.size()-100;i<studentsMap.size();i++){
+            for(int i=0;i<studentsMap.size();i++){
                 objectOutputStream.writeObject(studentsMap.get(i));
             }
             objectOutputStream.close();
