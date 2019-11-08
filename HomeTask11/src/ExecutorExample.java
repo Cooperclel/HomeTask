@@ -9,6 +9,7 @@ public class ExecutorExample {
         };
         executor.execute(task);
         executor.execute(task);
+        //execute() - вызывает поток и выводит результат
     }
 
 }
