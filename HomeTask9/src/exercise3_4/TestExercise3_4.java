@@ -43,15 +43,15 @@ public class TestExercise3_4 {
 //            System.out.println(i + ") " + studentsList.get(i));
 //        }
 
-        File studentsFile = new File("studentsFile.bin");
+        File studentsFile = new File("studentsFile.txt");
 
         System.out.println(studentsMap);
 
         try{
             FileOutputStream fileOutputStream = new FileOutputStream(studentsFile);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            for(int i=0;i<studentsMap.size();i++){
-                objectOutputStream.writeObject(studentsMap.get(i));
+            for(int i=0;i<studentsList.size();i++){
+                objectOutputStream.writeObject(studentsList.get(i));
             }
             objectOutputStream.close();
         }

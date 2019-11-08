@@ -13,13 +13,14 @@ public class TestExercise5 {
         try{
             FileInputStream fileInputStream = new FileInputStream("studentsFile.txt");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            Object object = null;
-            while ((object = objectInputStream.readObject()) != null){
-                Person students = (Person) object;
-                studensList.add(students);
+            while (true){
+                try{
+                    studensList.add((Person) objectInputStream.readObject());
+                }catch (EOFException e){
+                    break;
+                }
             }
-            objectInputStream.close();
-            studensList.stream().sorted(Comparator.comparing(Person::getId)).forEach(System.out::println);
+            fileInputStream.close();
 
         }catch (FileNotFoundException e){
             e.printStackTrace();
@@ -28,5 +29,7 @@ public class TestExercise5 {
         }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
+
+        studensList.stream().sorted(Comparator.comparing(Person::getId)).forEach(System.out::println);
     }
 }
