@@ -16,7 +16,8 @@ public class ExecutorServiceExample {
             System.out.println("attempt to shutdown executor");
             executor.shutdown();
             //shutdown() - ждет завершения запущенных задач,
-            executor.awaitTermination(5, TimeUnit.SECONDS);
+            executor.awaitTermination(10, TimeUnit.SECONDS);
+            //awaitTermination() позволяет указать длительность ожидания перед выполнением shutdownNow()
         }
         catch (InterruptedException e) {
             System.err.println("tasks interrupted");
