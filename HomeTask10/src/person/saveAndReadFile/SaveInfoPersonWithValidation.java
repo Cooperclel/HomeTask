@@ -7,9 +7,9 @@ import java.util.List;
 public class SaveInfoPersonWithValidation extends SaveInfoPerson{
 
     @Override
-    public void saveInfoPerson(List<Person> listPerson){
+    public void saveInfoPerson(List<Person> listPerson, String fileName){
         validate(listPerson);
-        super.saveInfoPerson(listPerson);
+        super.saveInfoPerson(listPerson, fileName);
     }
 
     public void validate(List<Person> listPerson){

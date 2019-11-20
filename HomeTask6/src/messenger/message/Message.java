@@ -4,11 +4,12 @@ package messenger.message;
 import messenger.encryption.Encryption;
 import messenger.user.User;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.InputMismatchException;
 
-public class Message {
+public class Message implements Serializable {
     private String message;
     private final User user;
     private Date date;

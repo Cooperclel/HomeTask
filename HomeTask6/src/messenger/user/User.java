@@ -2,7 +2,9 @@ package messenger.user;
 
 import messenger.message.InputTastatur;
 
-public class User implements IUser{
+import java.io.Serializable;
+
+public class User implements IUser, Serializable{
     private String login;
     private String password;
 

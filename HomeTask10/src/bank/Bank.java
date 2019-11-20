@@ -7,11 +7,12 @@ import com.sun.jdi.Value;
 import person.Person;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
-public class Bank implements IBank{
+public class Bank implements IBank, Serializable {
     private final String name;
     private Map<Person, List<Account>> data = new HashMap<>();
     private BigDecimal bankBalance;
@@ -40,9 +41,22 @@ public class Bank implements IBank{
         this.bankBalance = bankBalance;
     }
 
+    public BigDecimal sumAccountsMoneyInBank(){
+        BigDecimal bankAccountMoney = new BigDecimal(0);
+        for(List<Account> listAccounts:data.values()){
+            for (Account account:listAccounts){
+                bankAccountMoney = bankAccountMoney.add(account.getBalance());
+            }
+        }
+        return bankAccountMoney;
+    }
+
     public void addBankBalance(BigDecimal money){
-        bankBalance.add(money);
-        setBankBalance(bankBalance);
+        try{
+            getBankBalance().add(money);
+            setBankBalance(bankBalance);
+        }catch (NullPointerException e){}
+
     }
 
     public void addClient(Person p) throws IllegalArgumentException{
@@ -75,8 +89,12 @@ public class Bank implements IBank{
     }
 
     public Account createAccountForPerson(Person p, BigDecimal startAmount, ECurrency eCurrency){
-        Account account = new Account(UUID.randomUUID().toString(), startAmount, eCurrency);
-        addAccount(p, account);
+        Account account = null;
+        try{
+            account = new Account(UUID.randomUUID().toString(), startAmount, eCurrency);
+            addAccount(p, account);
+        }catch (NullPointerException e){}
+
         return account;
     }
 
@@ -87,17 +105,23 @@ public class Bank implements IBank{
             //System.out.println("У пользователя уже есть учетка");
         }
         //Проверка, что счета с таким номером в банке нет
-        for (List<Account> listAccount:data.values()){
-            for(Account accountSearcher :listAccount){
-                if((accountSearcher.getId().equals(account.getId()))){
-                    System.out.println("Счет с id: "+account.getId()+ "уже есть в банке");
-                    break;
-                }
-
-            }
-        }
         List<Account> accounts = this.data.get(p);
-        accounts.add(account);
+        int counter=0;
+        try{
+            for (int i = 0; i < accounts.size(); i++) {
+                if(account.getId().equals(accounts.get(i))){
+                    System.out.println("Счет с id: " + account.getId() + "уже есть в банке");
+                }
+            }
+            if(counter == 0){
+                accounts.add(account);
+            }
+            else {
+                System.out.println("Счет с id: " + account.getId() + "уже есть в банке");
+            }
+
+        }catch (NullPointerException e){}
+
 
     }
 
@@ -156,15 +180,15 @@ public class Bank implements IBank{
         } else{
             synchronized (from){
                 synchronized (to){
-                    System.out.println("Отправитель : \n" + sender.toString() + "\n Наименование банка отправителя: " + bankReceiver.getName());
-                    System.out.println("Получатель : \n" + receiver.toString() + "\n Наименование банка получателя: " + bankSender.getName());
-
+                    System.out.println("Отправитель : \n " + sender.toString() + "\n   Наименование банка отправителя: " + bankReceiver.getName());
+                    System.out.println("Получатель : \n " + receiver.toString() + "\n   Наименование банка получателя: " + bankSender.getName());
                     if(from.getBalance().compareTo(sum) == 1){
+                        System.out.println("   Сумма перевода = " + sum);
                         TransferCommission transferCommission = new TransferCommission();
                         from.withdraw(sum);
                         BigDecimal sumInUSD = sum.multiply(from.geteCurrency().getRelationToDollar());
                         BigDecimal commission =TransferCommission.sumWithCommission(sumInUSD);
-                        addBankBalance(commission);
+                        bankSender.addBankBalance(commission);
                         BigDecimal newSumTo = Account.transferSumToDollar(from,to,sum);
                         to.deposit(newSumTo.subtract(commission.divide(to.geteCurrency().getRelationToDollar(),6,RoundingMode.HALF_DOWN)));
                         System.out.println(transferCommission.toString());
@@ -179,13 +203,8 @@ public class Bank implements IBank{
 
     @Override
     public String toString() {
-        BigDecimal bankAccountMoney = new BigDecimal(0);
-        for(List<Account> listAccounts:data.values()){
-            for (Account account:listAccounts){
-                bankAccountMoney = bankAccountMoney.add(account.getBalance());
-            }
-        }
-        return "Банк: " + name + "\n Общее количество денег на счетах банка = " + bankAccountMoney + "\nПрибыль = " + bankBalance;
+        BigDecimal sum = sumAccountsMoneyInBank();
+        return "Банк: " + name + "\n Общее количество денег на счетах банка = " + sum + "\nПрибыль = " + getBankBalance();
     }
 
     //    //Получение Id Клиента по акаунту

@@ -1,20 +1,17 @@
 package messenger;
 
-import jdk.jshell.execution.JdiExecutionControl;
 import messenger.encryption.Decryption;
 import messenger.encryption.Encryption;
 import messenger.history.ConsoleSaver;
 import messenger.history.IHistorySaver;
 import messenger.message.*;
+import messenger.message.saveReadHistoryMessage.SaveFile;
 import messenger.user.*;
 
 import java.io.PrintStream;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.io.Serializable;
 
-public class Messanger {
+public class Messanger implements Serializable {
     public static void main(String[] args){
 
         PrintStream console = System.out;
@@ -153,6 +150,9 @@ public class Messanger {
                         }
 
                     }
+
+                    SaveFile fileDialog = new SaveFile();
+                    fileDialog.saveInfoBank(dialogs, "fileDialog.txt");
 
                 }while (!commandDialog.equals("5"));
 

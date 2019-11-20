@@ -17,7 +17,7 @@ public class ValidateUser {
 
     private static boolean proofPasswort(User user){
         String passwort = user.getPassword();
-        Pattern pattern = Pattern.compile("^.{8,15}$");
+        Pattern pattern = Pattern.compile("^([a-zA-Z].{8,15})$");
         Matcher matcher = pattern.matcher(passwort);
         return matcher.matches();
     }

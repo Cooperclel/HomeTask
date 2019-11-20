@@ -2,12 +2,13 @@ package person;
 
 import account.Account;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-public class Person {
+public class Person implements Serializable {
     private final String id;
     private String name;
     private List<Account> accounts = new ArrayList<>();

@@ -5,11 +5,12 @@ import messenger.history.IHistorySaver;
 import messenger.message.Message;
 
 import java.io.PrintStream;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Dialogs implements IDialog {
+public class Dialogs implements IDialog, Serializable {
     private Message[] messages = new Message[0];
     private Message message;
     public void addMessages(Message message){

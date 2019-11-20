@@ -2,12 +2,15 @@ import account.Account;
 import account.ECurrency;
 import bank.Bank;
 import bank.BankName;
+import bank.SortBanksAvgValue;
 import bank.saveAndReadFile.SaveInfoBankWithValidation;
 import person.Person;
 import person.PersonName;
 import person.saveAndReadFile.SaveInfoPersonWithValidation;
 import threads.TransferThread;
 
+import java.io.NotSerializableException;
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.CountDownLatch;
@@ -17,10 +20,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class BankingAppWithRandom {
-    static Random rnd = new Random();
-    static List<String> personNames = PersonName.personName();
-    static Queue<String> bankNames = BankName.bankName();
+public class BankingAppWithRandom implements Serializable {
+    private static Random rnd = new Random();
+    private static List<String> personNames = PersonName.personName();
+    private static Queue<String> bankNames = BankName.bankName();
     private static int peopleCount = 0;
 
     //Не готово
@@ -36,12 +39,11 @@ public class BankingAppWithRandom {
                 .collect(Collectors.toList());
 
         SaveInfoBankWithValidation saveBanks = new SaveInfoBankWithValidation();
-        saveBanks.saveInfoBank(banks);
+        saveBanks.saveInfoBank(banks, "fileBank.txt");
 
         /*
         * значение имени для каждого созданного Person не будет рандомным, а будет равняться первому знаечнию в personNames
         *  */
-
 
         List<Person> peoples = Stream.generate(() -> {
 //            peopleCount++;
@@ -52,26 +54,32 @@ public class BankingAppWithRandom {
                 .collect(Collectors.toList());
 
         SaveInfoPersonWithValidation savePerson = new SaveInfoPersonWithValidation();
-        savePerson.saveInfoPerson(peoples);
+        savePerson.saveInfoPerson(peoples, "filePeople.txt");
 
         peoples.parallelStream()
                 .filter(e -> rnd.nextBoolean())
                 .forEach(e -> {
                     int countCreate = rnd.nextInt(20) + 1;
-                    int bankCounter = banks.size();
                     for (int i = 0; i < countCreate; i++) {
 //                        Bank bank = banks.get(bankCounter);
 //                        bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (rnd.nextInt(10_000) + 10)), ECurrency.USD);
 //                        bankCounter --;
-                        Bank bank = banks.get(rnd.nextInt(banks.size()));
+                        Bank bank = null;
+                        try {
+                            bank = banks.get(rnd.nextInt(banks.size()));
+                        }catch (IndexOutOfBoundsException exc){}
                         bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (rnd.nextInt(10_000) + 1)) , ECurrency.USD);
                     }
                 });
 
+        System.out.println("Топ 100 банков до начала переводов");
+        banks.stream().sorted(new SortBanksAvgValue()).limit(100).forEach(p->{
+            System.out.println(p.toString());
+        });
 
         Runnable bankThread = () -> {
-            Bank bank1 = banks.get(rnd.nextInt(bankNames.size()));
-            Bank bank2 = banks.get(rnd.nextInt(bankNames.size()));
+            Bank bank1 = banks.get(rnd.nextInt(banks.size())-1);
+            Bank bank2 = banks.get(rnd.nextInt(banks.size())-1);
 
             Map<Person,List<Account>> mapBank1 = bank1.getData();
             Map<Person,List<Account>> mapBank2 = bank2.getData();
@@ -99,6 +107,13 @@ public class BankingAppWithRandom {
             executorService.shutdown();
         }
 
+        System.out.println("Топ 100 банков после переводов");
+        banks.stream().sorted(new SortBanksAvgValue()).limit(100).forEach(p->{
+            System.out.println(p.toString());
+        });
+        SaveInfoBankWithValidation newSaveBanks = new SaveInfoBankWithValidation();
+        newSaveBanks.saveInfoBank(banks, "newFileBank.txt");
+
         while (true){
             try {
                 TimeUnit.SECONDS.sleep(1);
@@ -106,6 +121,9 @@ public class BankingAppWithRandom {
                 Thread.currentThread().interrupt();
             }
         }
+
+
+
 
     }
 }
