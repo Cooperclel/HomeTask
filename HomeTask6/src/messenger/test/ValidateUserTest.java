@@ -15,7 +15,7 @@ class ValidateUserTest {
 
     private static boolean proofLogin(User user){
         String login = user.getLogin();
-        Pattern pattern = Pattern.compile("(#|!|\\\\|^[0-9]|^[a-zA-Z]|^.{0,4}$)");
+        Pattern pattern = Pattern.compile("(#|!|\\\\|^[0-9]|^[azAZ]|^.{0,4}$)");
         Matcher matcher = pattern.matcher(login);
 
         return !matcher.find();
@@ -31,11 +31,30 @@ class ValidateUserTest {
     @org.junit.jupiter.api.Test
     @ParameterizedTest(name = "{index} -> passwort={0}")
     @ValueSource(strings = {"passwort1", "123PasswortMyOnly", "get", "Пароль123", "CoolPasswort","passwort!&"})
-    public void getValidUser(String passwort){
+    public void getValidUserPasswort(String passwort){
+        System.out.println("Проверка пароля");
         boolean flagLogin = false;
         boolean flagPasswort = false;
         User user = null;
         user = new User("SomePerson1",passwort);
+        flagLogin = ValidateUserTest.proofLogin(user);
+        flagPasswort = ValidateUserTest.proofPasswort(user);
+        System.out.println(user.toString() +  "\nhas password: " + user.getPassword());
+        if(!flagLogin || !flagPasswort){
+            System.out.println("Inwalid User");
+        }else System.out.println("True User");
+
+    }
+
+    @org.junit.jupiter.api.Test
+    @ParameterizedTest(name = "{index} -> login={0}")
+    @ValueSource(strings = {"login1", "123Login", "get", "gotLogin123!", "CoolLogin","Логин"})
+    public void getValidUserLogin(String login){
+        System.out.println("Проверка логина");
+        boolean flagLogin = false;
+        boolean flagPasswort = false;
+        User user = null;
+        user = new User(login,"passwort1");
         flagLogin = ValidateUserTest.proofLogin(user);
         flagPasswort = ValidateUserTest.proofPasswort(user);
         System.out.println(user.toString() +  "\nhas password: " + user.getPassword());
