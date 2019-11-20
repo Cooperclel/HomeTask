@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4986aed-22cb-45d3-9b2e-6bb55342613b" name="Default Changelist" comment="zusatz">
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/Messanger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/ConsoleSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/FileSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/history/IHistorySaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/Dialogs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/InputTastatur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/message/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HomeTask6/src/messenger/user/ValidateUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HomeTask10/src/person/saveAndReadFile/SaveInfoPersonWithValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/BankingApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/BankingApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/account/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/account/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/bank/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/out/production/HomeTask10/bank/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/src/BankingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/src/BankingApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/src/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/src/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomeTask10/src/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/HomeTask10/src/bank/Bank.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Занятие 9" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -28,6 +28,14 @@ public class Bank implements IBank{
         return bankBalance;
     }
 
+    public Map<Person, List<Account>> getData() {
+        return data;
+    }
+
+    public void setData(Map<Person, List<Account>> data) {
+        this.data = data;
+    }
+
     public void setBankBalance(BigDecimal bankBalance) {
         this.bankBalance = bankBalance;
     }
@@ -76,7 +84,7 @@ public class Bank implements IBank{
         try {
             this.addClient(p);
         } catch (IllegalArgumentException ignored){
-            System.out.println("У пользователя уже есть учетка");
+            //System.out.println("У пользователя уже есть учетка");
         }
         //Проверка, что счета с таким номером в банке нет
         for (List<Account> listAccount:data.values()){
@@ -84,13 +92,12 @@ public class Bank implements IBank{
                 if((accountSearcher.getId().equals(account.getId()))){
                     System.out.println("Счет с id: "+account.getId()+ "уже есть в банке");
                     break;
-                }else{
-                    List<Account> accounts = this.data.get(p);
-                    accounts.add(account);
-                    break;
                 }
+
             }
         }
+        List<Account> accounts = this.data.get(p);
+        accounts.add(account);
 
     }
 
@@ -98,6 +105,9 @@ public class Bank implements IBank{
 
         synchronized (from){
             synchronized (to){
+                if(from == null || to == null){
+                    System.out.println("Аккаунт отправитель или аккаунт получатель не найдены");
+                }
                 if(from.getBalance().compareTo(sum) == 1){
                     from.withdraw(sum);
                     BigDecimal newSumTo = Account.transferSumToDollar(from,to,sum);
@@ -121,6 +131,11 @@ public class Bank implements IBank{
                 if(accountSearcher.getId().equals(accountIdFrom)){
                     from = accountSearcher;
                 }
+            }
+        }
+
+        for(List<Account> listAccount:data.values()){
+            for(Account accountSearcher : listAccount){
                 if(accountSearcher.getId().equals(accountIdTo)){
                     to = accountSearcher;
                 }
@@ -167,7 +182,7 @@ public class Bank implements IBank{
         BigDecimal bankAccountMoney = new BigDecimal(0);
         for(List<Account> listAccounts:data.values()){
             for (Account account:listAccounts){
-                bankAccountMoney.add(account.getBalance());
+                bankAccountMoney = bankAccountMoney.add(account.getBalance());
             }
         }
         return "Банк: " + name + "\n Общее количество денег на счетах банка = " + bankAccountMoney + "\nПрибыль = " + bankBalance;

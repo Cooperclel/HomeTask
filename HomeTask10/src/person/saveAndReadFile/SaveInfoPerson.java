@@ -13,7 +13,7 @@ public class SaveInfoPerson {
     public void saveInfoPerson (List<Person> listPerson){
         File filePerson = new File("filePerson");
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream("fileBank");
+            FileOutputStream fileOutputStream = new FileOutputStream("filePerson");
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             for (int i = 0; i < listPerson.size(); i++) {
                 objectOutputStream.writeObject(listPerson.get(i));
