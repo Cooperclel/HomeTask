@@ -28,6 +28,8 @@ public class ReadFile implements Serializable{
             e.printStackTrace();
         }catch (ClassNotFoundException e){
             e.printStackTrace();
+        }catch (ClassCastException e){
+            e.printStackTrace();
         }
 
         return dialogs;
