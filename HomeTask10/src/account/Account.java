@@ -2,10 +2,11 @@ package account;
 
 import bank.Bank;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Account implements IAccount{
+public class Account implements IAccount, Serializable {
     private final String id;
     private BigDecimal balance;
     private ECurrency eCurrency;

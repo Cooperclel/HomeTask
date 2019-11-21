@@ -78,8 +78,8 @@ public class BankingAppWithRandom implements Serializable {
         });
 
         Runnable bankThread = () -> {
-            Bank bank1 = banks.get(rnd.nextInt(banks.size())-1);
-            Bank bank2 = banks.get(rnd.nextInt(banks.size())-1);
+            Bank bank1 = banks.get(rnd.nextInt(banks.size()));
+            Bank bank2 = banks.get(rnd.nextInt(banks.size()));
 
             Map<Person,List<Account>> mapBank1 = bank1.getData();
             Map<Person,List<Account>> mapBank2 = bank2.getData();
@@ -87,8 +87,8 @@ public class BankingAppWithRandom implements Serializable {
             Collection<List<Account>> accountsCollection1 = mapBank1.values();
             Collection<List<Account>> accountsCollection2 = mapBank2.values();
 
-            List<Account> accounts1= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection1.size())).findAny().get();
-            List<Account> accounts2= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection2.size())).findAny().get();
+            List<Account> accounts1= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection1.size())-1).findAny().get();
+            List<Account> accounts2= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection2.size())-1).findAny().get();
 
             //Метод skip(long n) используется для пропуска n элементов. Этот метод возвращает новый поток, в котором пропущены первые n элементов.
             //Метод findFirst() извлекает из потока первый элемент, а findAny() извлекает случайный объект из потока (нередко так же первый).
@@ -97,6 +97,7 @@ public class BankingAppWithRandom implements Serializable {
             Account account2 = accounts2.get(rnd.nextInt(accounts2.size()));
 
             new TransferThread(account1, account2, bank1, bank2);
+
         };
 
         for (int i = 0; i < 100; i++) {
@@ -105,6 +106,7 @@ public class BankingAppWithRandom implements Serializable {
             executorService.execute(bankThread);
             executorService.execute(bankThread);
             executorService.shutdown();
+
         }
 
         System.out.println("Топ 100 банков после переводов");

@@ -150,7 +150,7 @@ public class Bank implements IBank, Serializable {
         Person sender = null;
         Person receiver = null;
 
-        for(List<Account> listAccount:data.values()){
+        for(List<Account> listAccount:bankSender.getData().values()){
             for(Account accountSearcher : listAccount){
                 if(accountSearcher.getId().equals(accountIdFrom)){
                     from = accountSearcher;
@@ -158,7 +158,7 @@ public class Bank implements IBank, Serializable {
             }
         }
 
-        for(List<Account> listAccount:data.values()){
+        for(List<Account> listAccount:bankReceiver.getData().values()){
             for(Account accountSearcher : listAccount){
                 if(accountSearcher.getId().equals(accountIdTo)){
                     to = accountSearcher;
@@ -166,10 +166,13 @@ public class Bank implements IBank, Serializable {
             }
         }
 
-        for(Map.Entry<Person, List<Account>> mapPersonList : data.entrySet()){
+        for(Map.Entry<Person, List<Account>> mapPersonList : bankSender.getData().entrySet()){
             if(mapPersonList.getValue().contains(from)){
                 sender = mapPersonList.getKey();
             }
+        }
+
+        for (Map.Entry<Person, List<Account>> mapPersonList : bankReceiver.getData().entrySet()){
             if(mapPersonList.getValue().contains(to)){
                 receiver = mapPersonList.getKey();
             }
@@ -180,8 +183,10 @@ public class Bank implements IBank, Serializable {
         } else{
             synchronized (from){
                 synchronized (to){
-                    System.out.println("Отправитель : \n " + sender.toString() + "\n   Наименование банка отправителя: " + bankReceiver.getName());
-                    System.out.println("Получатель : \n " + receiver.toString() + "\n   Наименование банка получателя: " + bankSender.getName());
+                    System.out.println("Отправитель : \n " + sender.toString() + "\n   Наименование банка отправителя: " + bankSender.getName());
+                    System.out.println("Аккаунт Отправителя: \n   " + from.toString());
+                    System.out.println("Получатель : \n " + receiver.toString() + "\n   Наименование банка получателя: " + bankReceiver.getName());
+                    System.out.println("Аккаунт Получатель: \n   " + to.toString());
                     if(from.getBalance().compareTo(sum) == 1){
                         System.out.println("   Сумма перевода = " + sum);
                         TransferCommission transferCommission = new TransferCommission();
@@ -192,6 +197,9 @@ public class Bank implements IBank, Serializable {
                         BigDecimal newSumTo = Account.transferSumToDollar(from,to,sum);
                         to.deposit(newSumTo.subtract(commission.divide(to.geteCurrency().getRelationToDollar(),6,RoundingMode.HALF_DOWN)));
                         System.out.println(transferCommission.toString());
+                        System.out.println("Перевод Осуществился");
+                        System.out.println("Аккаунт Отправителя: \n   " + from.toString());
+                        System.out.println("Аккаунт Получатель: \n   " + to.toString());
                     }else {
                         System.out.println("Недостаточно средств для перевода");
                     }

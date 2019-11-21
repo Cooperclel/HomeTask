@@ -1,12 +1,13 @@
 package bank;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class BankName {
+public class BankName implements Serializable {
     public static Queue<String> bankName(){
         Queue<String> bankNames= new ConcurrentLinkedQueue<>(){{
             add("Идея Банк");

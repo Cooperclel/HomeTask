@@ -1,9 +1,10 @@
 package person;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonName {
+public class PersonName implements Serializable {
     public static List<String> personName(){
         List<String> personNames = new ArrayList<>(){{
             add("Аарон");
