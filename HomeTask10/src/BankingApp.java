@@ -103,7 +103,7 @@ public class BankingApp {
 //        t4.start();
 
         bank1.transferInOneBank(account1Bank1,account2Bank1,new BigDecimal(80),bank1);
-        bank1.transferBetweenBanks(account3Bank1.getId(),account1Bank2.getId(),new BigDecimal(393),bank1,bank2);
+        bank1.transferBetweenBanks(account2Bank1.getId(),account1Bank2.getId(),new BigDecimal(600),bank1,bank2);
 
         System.out.println(bank1.toString());
         System.out.println(bank2.toString());

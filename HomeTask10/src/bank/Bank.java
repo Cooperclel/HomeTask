@@ -53,8 +53,9 @@ public class Bank implements IBank, Serializable {
 
     public void addBankBalance(BigDecimal money){
         try{
-            getBankBalance().add(money);
-            setBankBalance(bankBalance);
+            BigDecimal newBankBalance = null;
+            newBankBalance = bankBalance.add(money);
+            setBankBalance(newBankBalance);
         }catch (NullPointerException e){}
 
     }
@@ -212,7 +213,7 @@ public class Bank implements IBank, Serializable {
     @Override
     public String toString() {
         BigDecimal sum = sumAccountsMoneyInBank();
-        return "Банк: " + name + "\n Общее количество денег на счетах банка = " + sum + "\nПрибыль = " + getBankBalance();
+        return "Банк: " + name + "\n Общее количество денег на счетах банка = " + sum + "\nПрибыль = " + bankBalance;
     }
 
     //    //Получение Id Клиента по акаунту

@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 
 public class TransferCommission {
     private BigDecimal commission = new BigDecimal(0.01);
-    private BigDecimal minSumOfCommission = new BigDecimal(5); // Минимальная коммиссия в USD
+    private BigDecimal minSumOfCommission = new BigDecimal(0.5); // Минимальная коммиссия в USD
 
     public BigDecimal getCommission() {
         return commission;

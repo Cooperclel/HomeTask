@@ -64,11 +64,19 @@ public class BankingAppWithRandom implements Serializable {
 //                        Bank bank = banks.get(bankCounter);
 //                        bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (rnd.nextInt(10_000) + 10)), ECurrency.USD);
 //                        bankCounter --;
-                        Bank bank = null;
+
                         try {
-                            bank = banks.get(rnd.nextInt(banks.size()));
-                        }catch (IndexOutOfBoundsException exc){}
-                        bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (rnd.nextInt(10_000) + 1)) , ECurrency.USD);
+                            Bank bank = null;
+                            int index = rnd.nextInt();
+                            bank = banks.get(index<0?0:index - 1);
+                            //Прочитать про nextInt
+                            //Nullpointer
+                            int index1 = rnd.nextInt(10000);
+                            bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (index1<0?0:index1 - 1)) , ECurrency.USD);
+                        }catch (IndexOutOfBoundsException exc){
+                            System.out.println("IntdexExeption");
+                        }
+
                     }
                 });
 
@@ -78,8 +86,8 @@ public class BankingAppWithRandom implements Serializable {
         });
 
         Runnable bankThread = () -> {
-            Bank bank1 = banks.get(rnd.nextInt(banks.size()));
-            Bank bank2 = banks.get(rnd.nextInt(banks.size()));
+            Bank bank1 = banks.get(rnd.nextInt(banks.size())-1);
+            Bank bank2 = banks.get(rnd.nextInt(banks.size())-1);
 
             Map<Person,List<Account>> mapBank1 = bank1.getData();
             Map<Person,List<Account>> mapBank2 = bank2.getData();
@@ -96,7 +104,8 @@ public class BankingAppWithRandom implements Serializable {
             Account account1 = accounts1.get(rnd.nextInt(accounts1.size()));
             Account account2 = accounts2.get(rnd.nextInt(accounts2.size()));
 
-            new TransferThread(account1, account2, bank1, bank2);
+            //new TransferThread(account1, account2, bank1, bank2);
+            bank1.transferBetweenBanks(account1.getId(),account2.getId(),new BigDecimal(rnd.nextDouble()),bank1,bank2);
 
         };
 
