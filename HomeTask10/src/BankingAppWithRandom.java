@@ -67,12 +67,12 @@ public class BankingAppWithRandom implements Serializable {
 
                         try {
                             Bank bank = null;
-                            int index = rnd.nextInt();
-                            bank = banks.get(index<0?0:index - 1);
+                            int index = rnd.nextInt(banks.size())-1;
+                            bank = banks.get(index<0?0:index);
                             //Прочитать про nextInt
                             //Nullpointer
                             int index1 = rnd.nextInt(10000);
-                            bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (index1<0?0:index1 - 1)) , ECurrency.USD);
+                            bank.createAccountForPerson(e, new BigDecimal(rnd.nextDouble() * (index1<1?1:index1)) , ECurrency.USD);
                         }catch (IndexOutOfBoundsException exc){
                             System.out.println("IntdexExeption");
                         }
@@ -86,8 +86,10 @@ public class BankingAppWithRandom implements Serializable {
         });
 
         Runnable bankThread = () -> {
-            Bank bank1 = banks.get(rnd.nextInt(banks.size())-1);
-            Bank bank2 = banks.get(rnd.nextInt(banks.size())-1);
+            int index1 = rnd.nextInt(banks.size())-1;
+            int index2 = rnd.nextInt(banks.size())-1;
+            Bank bank1 = banks.get(index1<0?0:index1);
+            Bank bank2 = banks.get(index2<0?0:index2);
 
             Map<Person,List<Account>> mapBank1 = bank1.getData();
             Map<Person,List<Account>> mapBank2 = bank2.getData();
@@ -95,8 +97,10 @@ public class BankingAppWithRandom implements Serializable {
             Collection<List<Account>> accountsCollection1 = mapBank1.values();
             Collection<List<Account>> accountsCollection2 = mapBank2.values();
 
-            List<Account> accounts1= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection1.size())-1).findAny().get();
-            List<Account> accounts2= accountsCollection1.stream().skip(rnd.nextInt(accountsCollection2.size())-1).findAny().get();
+            int index3 = rnd.nextInt(accountsCollection1.size())-1;
+            int index4 = rnd.nextInt(accountsCollection2.size())-1;
+            List<Account> accounts1= accountsCollection1.stream().skip(index3<0?0:index3).findAny().get();
+            List<Account> accounts2= accountsCollection1.stream().skip(index4<0?0:index4).findAny().get();
 
             //Метод skip(long n) используется для пропуска n элементов. Этот метод возвращает новый поток, в котором пропущены первые n элементов.
             //Метод findFirst() извлекает из потока первый элемент, а findAny() извлекает случайный объект из потока (нередко так же первый).
@@ -114,9 +118,8 @@ public class BankingAppWithRandom implements Serializable {
             executorService.execute(bankThread);
             executorService.execute(bankThread);
             executorService.execute(bankThread);
-            executorService.shutdown();
-
         }
+        executorService.shutdown();
 
         System.out.println("Топ 100 банков после переводов");
         banks.stream().sorted(new SortBanksAvgValue()).limit(100).forEach(p->{
